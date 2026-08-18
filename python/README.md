@@ -2,13 +2,14 @@
 
 Amazon search interest and bestseller feeds via the Trends API. Ecommerce research without scrapers.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![PyPI](https://img.shields.io/pypi/v/trendsapi-amazon.svg)](https://pypi.org/project/trendsapi-amazon/) [![npm](https://img.shields.io/npm/v/trendsapi-amazon.svg)](https://www.npmjs.com/package/trendsapi-amazon)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/trendsapi-amazon.svg)](https://pypi.org/project/trendsapi-amazon/)
 
 Key: [trendsapi.ai/#get-key](https://trendsapi.ai/#get-key). Full contract: [trendsapi-ai/trendsapi](https://github.com/trendsapi-ai/trendsapi).
 
-## Install
+JS: [`trendsapi-amazon`](https://www.npmjs.com/package/trendsapi-amazon).
 
-### Python
+## Install
 
 ```bash
 pip install trendsapi-amazon
@@ -23,21 +24,7 @@ growth = client.get_growth("standing desk", percent_growth=["12M"])
 hot = client.get_live(limit=10)
 ```
 
-### JavaScript
-
-```bash
-npm install trendsapi-amazon
-```
-
-```ts
-import { TrendsAPI } from "trendsapi-amazon";
-
-const client = new TrendsAPI({ apiKey: process.env.TRENDSAPI_KEY });
-const series = await client.getTimeSeries("standing desk");
-const growth = await client.getGrowth("standing desk", { percent_growth: ["12M"] });
-const live = await client.getLive({ limit: 10 });
-```
-
+Keyword helpers default to `source: "amazon"`. Override `source=` for any other platform. Official full client: [`trendsapi`](https://pypi.org/project/trendsapi/).
 
 ## Call
 
@@ -62,7 +49,7 @@ Feeds answer what is selling now. Keyword series answer what is searched.
 
 Google Shopping is a different `source` (`google shopping`).
 
-Site: [https://trendsapi.ai/trends/amazon-trends](https://trendsapi.ai/trends/amazon-trends).
+Site: [https://trendsapi.ai/trends/amazon-trends](https://trendsapi.ai/trends/amazon-trends). GitHub: [trendsapi-ai/amazon-trends-api](https://github.com/trendsapi-ai/amazon-trends-api).
 
 ## License
 
