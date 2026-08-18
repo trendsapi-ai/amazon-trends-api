@@ -1,16 +1,28 @@
 # Amazon product-search demand API
 
-JSON for **how often shoppers search a phrase** on Amazon. Not ASIN rank, not PA-API, not Helium 10 revenue.
-
-Key: [trendsapi.ai/#get-key](https://trendsapi.ai/#get-key). Contract: [trendsapi-ai/trendsapi](https://github.com/trendsapi-ai/trendsapi).
+JSON for **how often shoppers search a phrase** on Amazon. Not ASIN rank, not PA-API.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Source](https://img.shields.io/badge/source-amazon-yellow.svg)](https://trendsapi.ai/trends/amazon-trends)
 [![npm](https://img.shields.io/npm/v/trendsapi-amazon.svg)](https://www.npmjs.com/package/trendsapi-amazon)
+
+Key: [trendsapi.ai/#get-key](https://trendsapi.ai/#get-key). Full contract: [trendsapi-ai/trendsapi](https://github.com/trendsapi-ai/trendsapi).
+
+## Install
 
 ```bash
 npm install trendsapi-amazon
 ```
+
+```ts
+import { TrendsAPI } from "trendsapi-amazon";
+
+const client = new TrendsAPI({ apiKey: process.env.TRENDSAPI_KEY });
+const series = await client.getTimeSeries("standing desk");
+const growth = await client.getGrowth("standing desk", { percent_growth: ["12M"] });
+const bestsellers = await client.getLive({ limit: 10 });
+```
+
+Keyword helpers default to `source: "amazon"`. Override `source` for any other platform. Official full client: [`trendsapi`](https://www.npmjs.com/package/trendsapi).
 
 ## Call
 
