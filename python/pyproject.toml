@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "trendsapi-amazon"
-version = "1.0.0"
+version = "1.0.1"
 description = "Amazon search interest and bestseller feeds via the Trends API. Ecommerce research without scrapers."
 readme = "README.md"
 license = "MIT"
