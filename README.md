@@ -6,6 +6,11 @@ Key: [trendsapi.ai/#get-key](https://trendsapi.ai/#get-key). Contract: [trendsap
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Source](https://img.shields.io/badge/source-amazon-yellow.svg)](https://trendsapi.ai/trends/amazon-trends)
+[![npm](https://img.shields.io/npm/v/trendsapi-amazon.svg)](https://www.npmjs.com/package/trendsapi-amazon)
+
+```bash
+npm install trendsapi-amazon
+```
 
 ## Call
 
